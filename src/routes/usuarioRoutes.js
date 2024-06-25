@@ -1,14 +1,13 @@
 import express from "express";
 import UsuarioController from "../controllers/usuarioController.js";
 
-const routes = express.Router();
+const router = express.Router();
 
-routes.get("/usuarios", UsuarioController.listarLivros);
-routes.get("/usuarios/:id", UsuarioController.listarUsuarioPorId);
-routes.post("/usuarios", UsuarioController.cadastrarUsuario);
-routes.put("/usuarios/:id", UsuarioController.atualizarUsuario);
-routes.delete("/usuarios/:id", UsuarioController.excluirUsuario);
+// Certifique-se de que os métodos do controlador estão sendo referenciados corretamente
+router.get("/usuarios", UsuarioController.listarUsuarios); // Correção aqui
+router.get("/usuarios/:id", UsuarioController.listarUsuarioPorId);
+router.post("/usuarios", UsuarioController.cadastrarUsuario);
+router.put("/usuarios/:id", UsuarioController.atualizarUsuario);
+router.delete("/usuarios/:id", UsuarioController.excluirUsuario);
 
-
-
-export default routes;
+export default router;

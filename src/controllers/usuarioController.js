@@ -1,55 +1,66 @@
-import usuario from "../models/usuario.js";
+import Usuario from "../models/usuario.js";
 
-class UsuarioController{
-
-    static async listarLivros (req,res){
+class UsuarioController {
+    static async listarUsuarios(req, res) {
         try {
-            const listaUsuarios = await usuario.find({});
+            const listaUsuarios = await Usuario.find({});
             res.status(200).json(listaUsuarios);
         } catch (error) {
-            res.status(500).send("Erro ao buscar usuários");
-        }
-    }
-    static async listarUsuarioPorId (req, res) {
-        try {
-          const id = req.params.id;
-          const usuarioEncontrado = await usuario.findById(id);
-          res.status(200).json(usuarioEncontrado);
-        } catch (erro) {
-          res.status(500).json({ message: `${erro.message} - falha na requisição do usuario` });
-        }
-      };
-
-    static async cadastrarUsuario(req,res){
-        try{
-            const novoUsuario = await usuario.create(req.body);
-            res.status(201).json({message:"criado com sucesso", usuario: novoUsuario});
-        }catch(erro){
-            res.status(500).json({ message: `${erro.message} - falha ao cadastrar usuario` });
+            res.status(500).json({ message: "Erro ao buscar usuários", error: error.message });
         }
     }
 
-    static async atualizarUsuario (req, res) {
+    static async listarUsuarioPorId(req, res) {
         try {
-          const id = req.params.id;
-          await usuario.findByIdAndUpdate(id, req.body);
-          res.status(200).json({ message: "Usuario atualizado" });
+            const id = req.params.id;
+            const usuarioEncontrado = await Usuario.findById(id);
+            if (usuarioEncontrado) {
+                res.status(200).json(usuarioEncontrado);
+            } else {
+                res.status(404).json({ message: "Usuário não encontrado" });
+            }
         } catch (erro) {
-          res.status(500).json({ message: `${erro.message} - Falha na atualização` });
+            res.status(500).json({ message: `Falha na requisição do usuário`, error: erro.message });
         }
-      };
+    }
 
-      static async excluirUsuario (req, res) {
+    static async cadastrarUsuario(req, res) {
         try {
-          const id = req.params.id;
-          await usuario.findByIdAndDelete(id);
-          res.status(200).json({ message: "Usuario excluído com sucesso" });
+            const novoUsuario = new Usuario(req.body);
+            await novoUsuario.save();
+            res.status(201).json({ message: "Usuário criado com sucesso", usuario: novoUsuario });
         } catch (erro) {
-          res.status(500).json({ message: `${erro.message} - Falha na exclusão` });
+            res.status(400).json({ message: `Falha ao cadastrar usuário`, error: erro.message });
         }
-      };
+    }
 
+    static async atualizarUsuario(req, res) {
+        try {
+            const id = req.params.id;
+            const usuarioAtualizado = await Usuario.findByIdAndUpdate(id, req.body, { new: true });
+            if (usuarioAtualizado) {
+                res.status(200).json({ message: "Usuário atualizado com sucesso", usuario: usuarioAtualizado });
+            } else {
+                res.status(404).json({ message: "Usuário não encontrado" });
+            }
+        } catch (erro) {
+            res.status(400).json({ message: `Falha na atualização do usuário`, error: erro.message });
+        }
+    }
+
+    static async excluirUsuario(req, res) {
+        try {
+            const id = req.params.id;
+            const usuarioExcluido = await Usuario.findByIdAndDelete(id);
+            if (usuarioExcluido) {
+                res.status(200).json({ message: "Usuário excluído com sucesso" });
+            } else {
+                res.status(404).json({ message: "Usuário não encontrado" });
+            }
+        } catch (erro) {
+            res.status(500).json({ message: `Falha na exclusão do usuário`, error: erro.message });
+        }
+    }
 }
-
 
 export default UsuarioController;

@@ -5,7 +5,7 @@ import routes from "./routes/index.js";
 // Função para iniciar o aplicativo
 async function startApp() {
     const app = express();
-    
+
     // Conectando ao banco de dados
     const conexao = await conectaNaDatabase();
 
