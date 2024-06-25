@@ -1,0 +1,182 @@
+/* Importação da fonte Dongle do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(250, 247, 241, 1); /* Cor de fundo */
+    font-family: 'Dongle', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.container-login {
+    display: flex;
+    width: 80%;
+    height: 85%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-login {
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at 100% 100%, #F69420 0%, #FF671F 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.img-login img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.content-box {
+    width: 50%;
+    height: 100%;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-box h2 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.input-box input[type="email"],
+.input-box input[type="password"],
+.input-box button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(250, 247, 241, 1);
+    color: #333;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-box button[type="submit"] {
+    background: radial-gradient(circle at 100% 100%, #F69420 0%, #FF671F 100%);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.input-box button[type="submit"]:hover {
+    background: #FF671F;
+}
+
+.Lembrar-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.Lembrar-me a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.ul li {
+    margin: 0 10px;
+}
+
+.ul li img {
+    width: 110px;
+    height: 30px;
+}
+
+.content-box h4 {
+    margin: 10px 0 20px;
+    font-size: 2em;
+}
+
+.content-box p {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1200px) {
+    .container-login {
+        width: 90%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-login {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-login, .content-box {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .content-box h2 {
+        font-size: 2em;
+    }
+
+    .input-box label {
+        font-size: 1em;
+    }
+
+    .input-box input[type="email"],
+    .input-box input[type="password"],
+    .input-box button[type="submit"] {
+        font-size: 1.5em;
+    }
+
+    .content-box h4 {
+        font-size: 1.8em;
+    }
+}

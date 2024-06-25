@@ -1,37 +1,331 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trilhas Solidárias</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
-    <header>
-        <h1>Trilhas Solidárias</h1>
-        <nav>
-            <ul>
-                <li><a href="cadastro-voluntario.html">Cadastro de Voluntário</a></li>
-                <li><a href="cadastro-organizacao.html">Cadastro de Organização</a></li>
+
+    <!-- INÍCIO DA LANDINGPAGE-->
+
+    <section class="inicio_landingPage">
+        <header class="header-LandingPage">
+            <h1 class="header-Titulo">Trilhas Solidárias</h1>
+            <ul class="header-list-options">
+                <li class="header-options"><a href="#funcionamento">Como Funciona</a></li>
+                <li class="header-options"><a href="#sobreNos">Sobre nós</a></li>
+                <li class="header-options"><a href="#depoimentos">Depoimentos</a></li>
+                <li class="header-options"><a href="#contato">Contato</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Sobre o Programa</h2>
-            <p>O programa "Trilhas Solidárias" visa conectar voluntários a organizações da sociedade civil, promovendo a colaboração e o impacto social positivo.</p>
+        </header>
+        <div class="introducao-container">
+            <div class="introducao-textos">
+                <h1 class="titulo-introducao">Transforme Solidariedade<br>em Ação: Conecte,<br>Colabore, Impacte!</h1>
+                <p class="paragrafo-introducao">Junte-se a uma comunidade dinâmica onde ONGs e<br>voluntários se
+                    encontram para fazer a diferença.
+                    Nossa<br>plataforma gamificada facilita o processo seletivo, tornando a colaboração social mais
+                    acessível e envolvente.</p>
+                <div class="botoes-introducao">
+                    <a href="https://producao-six.vercel.app/cadastro-voluntario.html" class="botao-primario">Quero ser voluntário</a>
+                    <a href="https://producao-six.vercel.app/cadastro-organizacao.html" class="botao-secundario">Sou uma ONG</a>
+                </div>
+            </div>
+            <div class="midias-introducao">
+
+                <p class="primeiro-ret-midias">Reconhecida por inovação em tecnologia social</p>
+                <p class="segundo-ret-midias">+200 ONGs ativas</p>
+                <p class="terceiro-ret-midias">Mais de 10.000 voluntários engajados.</p>
+
+                <div class="imagens-introducao">
+                    <img class="imagem-introducao" src="assets/src/imagemDoInicio.svg">
+                    <div class="elipses-introducao">
+                        <img class="elipse-externa-introducao" src="assets/src/Ellipse 2.svg">
+                        <img class="elipse-interna-introducao" src="assets/src/Ellipse 1.svg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <img class="barra-laranja" src="assets/src/orangebar.svg">
+
+
+        <!-- Como Funciona?-->
+        <section class="funcionamento" id="funcionamento">
+            <div class="bloco-superior-funcionamento">
+                <h1 class="como-funciona">Como funciona?</h1>
+                <p class="paragrafo-funcionamento">Nossa plataforma gamificada conecta ONGs e voluntários de forma
+                    dinâmica e envolvente.<br>
+                    Cadastre-se, explore oportunidades, participe de processos seletivos interativos e<br>
+                    contribua para causas importantes enquanto ganha recompensas. Nosso fluxo é:</p>
+            </div>
+
+
+            <div class="container-conteudos-funcionalidades">
+                <div class="lado-esquerdo-funcionalidades">
+                    <div class="icons-blocos">
+                        <img class="iconCadastro" src="assets/src/cadastroblocoicon.svg">
+                        <img class="iconJogoInterativo" src="assets/src/jogointerativoblocoicon.svg">
+                        <img class="iconConexao" src="assets/src/conexaoblocoicon.svg">
+                    </div>
+                    <div class="textos-blocos">
+                        <div class="bloco-cadastro">
+                            <h1 class="cadastro-titulo">1. Cadastro</h1>
+                            <p class="cadastro-paragrafo">Crie seu perfil, como voluntário ou ONG em minutos.<br>
+                                Voluntários podem destacar suas habilidades e<br>
+                                interesses, enquanto ONGs descrevem seus projetos<br>
+                                e necessidades específicas.</p>
+                        </div>
+                        <div class="bloco-jogoInterativo">
+                            <h1 class="jogoInterativo-titulo">2. Jogo interativo</h1>
+                            <p class="jogoInterativo-paragrafo">Participe de missões gamificadas que permitem<br>
+                                demonstrar suas habilidades e motivação.<br>
+                                Voluntários ganham pontos e desbloqueiam<br>
+                                recompensas à medida que avançam.</p>
+                        </div>
+                        <div class="bloco-conexaoOng">
+                            <h1 class="conexaoOng-titulo">3. Conexão com ONGs</h1>
+                            <p class="conexaoOng-paragrafo">Conecte-se com ONGs que precisam de suas<br>
+                                habilidades. Receba convites para participar de<br>
+                                projetos e colabore com causas que fazem a diferença.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lado-direito-funcionalidades">
+                    <img class="imagemMulherCaixa" src="assets/src/imagemmulhercomcaixa.svg">
+                    <img class="retanguloFundoMulherCaixa" src="assets/src/retlaranjamulhercomcaixa.svg">
+                </div>
+
+            </div>
         </section>
-        <section>
-            <h2>Nosso Objetivo</h2>
-            <p>Facilitar o encontro entre pessoas que desejam fazer a diferença e organizações que precisam de ajuda para alcançar suas metas e projetos sociais.</p>
+
+        <!-- sobre nós -->
+        <section class="sobreNos" id="sobreNos">
+            <div class="sobreNos__content">
+                <h3>Sobre nós</h3>
+                <h2>Uma equipe de colaboradores altamente qualificados!</h2>
+                <p class="sobreNos__cards__card__paragrafo">
+                    Somos uma equipe dedicada e comprometida com a missão de
+                    propor um ambiente inovador que não apenas une ONGs e
+                    voluntários, mas também torna a colaboração social mais
+                    acessível e envolvente. Com paixão e expertise, trabalhamos
+                    para transformar solidariedade em ação, criando um impacto
+                    positivo no mundo!
+                </p>
+                <div class="sobreNos__content__links">
+                    <a href="https://producao-six.vercel.app/cadastro-voluntario.html" class="botao-primario">Quero ser voluntário</a>
+                    <a href="https://producao-six.vercel.app/cadastro-organizacao.html" class="botao-secundario">Sou uma ONG</a>
+                </div>
+            </div>
+            <img src="assets/Group 9.png" alt="Coleção de imagens de pessoas" />
         </section>
-        <section>
-            <h2>Como Funciona</h2>
-            <p>Os voluntários podem se cadastrar e escolher entre diversas oportunidades oferecidas por organizações parceiras. As organizações podem registrar suas vagas de voluntariado e encontrar pessoas dedicadas e apaixonadas por ajudar.</p>
+
+        <!-- depoimentos -->
+        <section class="depoimentos" id="depoimentos">
+            <h2>Uma comunidade <br> de usuários contentes!</h2>
+
+            <div class="depoimentos__cards">
+                <div class="depoimentos__cards__card">
+                    <div class="depoimentos__cards__card__cabecalho">
+                        <img src="assets/Ellipse 10.png" alt="" />
+                        <div class="depoimentos__cards__card__cabecalho__titulo">
+                            <h4>Paulo Sodré</h4>
+                            <p>Representante de ONG</p>
+                        </div>
+                    </div>
+                    <div class="depoimentos__cards__card__estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="depoimentos__cards__card__paragrafo">
+                        Nossa ONG encontrou na plataforma o parceiro ideal para expandir nossos projetos. O processo
+                        seletivo gamificado nos ajudou a identificar voluntários dedicados, tornando nossa colaboração
+                        mais
+                        eficiente e impactante. Estamos muito satisfeitos com os resultados!
+                    </p>
+                </div>
+
+                <div class="depoimentos__cards__card">
+                    <div class="depoimentos__cards__card__cabecalho">
+                        <img src="assets/Ellipse 10 (1).png" alt="" />
+                        <div class="depoimentos__cards__card__cabecalho__titulo">
+                            <h4>Gabriela Maria</h4>
+                            <p>Voluntária iniciante</p>
+                        </div>
+                    </div>
+                    <div class="depoimentos__cards__card__estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="depoimentos__cards__card__paragrafo">
+                        Como voluntária iniciante, estava um pouco insegura no início, mas a plataforma me proporcionou
+                        uma
+                        transição suave. Encontrei missões que correspondem aos meus interesses e pude contribuir de
+                        maneira
+                        significativa. É incrível como a solidariedade pode ser tão divertida e recompensadora!
+                    </p>
+                </div>
+
+                <div class="depoimentos__cards__card">
+                    <div class="depoimentos__cards__card__cabecalho">
+                        <img src="assets/Ellipse 10 (2).png" alt="" />
+                        <div class="depoimentos__cards__card__cabecalho__titulo">
+                            <h4>Enzo Nava</h4>
+                            <p>Líder de voluntários</p>
+                        </div>
+                    </div>
+                    <div class="depoimentos__cards__card__estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="depoimentos__cards__card__paragrafo">
+                        Descobri a plataforma e me apaixonei instantaneamente! Participar de missões gamificadas me
+                        permitiu
+                        não apenas contribuir para causas importantes, mas também desenvolver novas habilidades. É uma
+                        experiência gratificante que recomendo a todos!
+                    </p>
+                </div>
+            </div>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Trilhas Solidárias. Todos os direitos reservados.</p>
-    </footer>
+
+        <!-- contato -->
+
+        <div class="contato">
+            <div class="esquerda">
+                <img src="assets/esquerda.svg" alt="">
+            </div>
+            <div class="direita">
+                <div class="titulo-campos">
+                    <div class="titulo-subtitulo">
+                        <h2>Contato</h2>
+                        <p>Entre em contato conosco para obter mais informações sobre nossa <br>
+                            plataforma ou para qualquer dúvida. Vamos adorar bater um papo!</p>
+                    </div>
+                    <div class="campos">
+                        <form class="register-form" id="register-form">
+                            <div class="input-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome" placeholder="">
+                            </div>
+                            <div class="input-group">
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email" placeholder="">
+                            </div>
+                            <div class="input-group">
+                                <label for="telefone">Telefone (opcional):</label>
+                                <input type="tel" name="telefone" id="telefone" placeholder="">
+                            </div>
+                            <div class="input-group">
+                                <label for="assunto">Assunto:</label>
+                                <input type="text" name="assunto" id="assunto" placeholder="">
+                            </div>
+                            <div class="input-group-full">
+                                <label for="mensagem">Mensagem:</label>
+                                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <button class="botao-primario" type="submit">Enviar</button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="upper-group">
+                    <div class="titulo-midias">
+                        <div class="titulos">
+                            <h3>Trilhas Solidárias</h3>
+                            <p>Transforme solidariedade em <br>ação: conecte, colabore, impacte!</p>
+                        </div>
+                        <div class="midias">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                    </div>
+                    <div class="menus-nav">
+                        <div class="menu-nav">
+                            <h4>Navegação</h4>
+                            <ul>
+                                <li>Início</li>
+                                <li>Como funciona</li>
+                                <li>Sobre nós</li>
+                                <li>Depoimentos</li>
+                                <li>Contato</li>
+                            </ul>
+                        </div>
+                        <div class="menu-nav">
+                            <h4>Suporte</h4>
+                            <ul>
+                                <li>Ajuda</li>
+                                <li>Perguntas frequentes</li>
+                                <li>Feedback</li>
+                            </ul>
+                        </div>
+                        <div class="menu-nav">
+                            <h4>Links</h4>
+                            <ul>
+                                <li>Torne-se apoiador</li>
+                                <li>Serviços</li>
+                            </ul>
+                        </div>
+                        <div class="menu-nav">
+                            <h4>Contato</h4>
+                            <ul>
+                                <li>+55 (99) 99999-9999</li>
+                                <li>suporte@trilhassolidarias.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-group">
+                    <hr>
+                    <p class="copyright">Copyright © 2024. Trilhas Solidárias. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+
 </body>
+
 </html>
