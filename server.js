@@ -1,17 +1,29 @@
 import "dotenv/config";
 import express from "express";
 import path from "path";
-import app from "./src/app.js";
+import { fileURLToPath } from 'url';
+import startApp from "./src/app.js";
 
 const PORT = process.env.PORT || 3000;
 
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'public')));
+// Resolver __dirname para módulos ES
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+async function main() {
+    const app = await startApp();
 
-app.listen(PORT, () => {
-  console.log(`Servidor escutando na porta ${PORT}`);
-});
+    // Servir arquivos estáticos
+    app.use(express.static(path.join(__dirname, 'public')));
+
+    // Servir index.html para qualquer rota não reconhecida
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    });
+
+    app.listen(PORT, () => {
+        console.log(`Servidor escutando na porta ${PORT}`);
+    });
+}
+
+main();
