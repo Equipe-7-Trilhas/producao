@@ -2,6 +2,7 @@ import express from "express";
 import conectaNaDatabase from "./config/dbConnect.js";
 import routes from "./routes/index.js";
 
+// Conectando ao banco de dados
 const conexao = await conectaNaDatabase();
 
 conexao.on("error", (erro) => {
@@ -13,19 +14,7 @@ conexao.once("open", () => {
 });
 
 const app = express();
+app.use(express.json());
 routes(app);
-
-
-app.delete("/usuarios/:id", (req, res) => {
-    const id = req.params.id;
-    const index = buscaUsuario(id);
-    if (index !== -1) {
-        usuarios.splice(index, 1);  // Remove o usuário da lista
-        res.status(200).send("Usuario removido com sucesso");
-    } else {
-        res.status(404).send("Usuario não encontrado");
-    }
-});
-
 
 export default app;
