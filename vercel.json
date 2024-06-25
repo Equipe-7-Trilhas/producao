@@ -1,7 +1,19 @@
 {
-    "env": {
-      "NODE_ENV": "production",
-      "DB_CONNECT_STRING": "<sua-string-de-conexão-de-produção>"
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "DB_CONNECT_STRING": "mongodb+srv://trilhassolidariasinova:Id1p91fY4OOU1d8J@cluster0.fixz9kx.mongodb.net/trilhas?retryWrites=true&w=majority&appName=Cluster0"
   }
-  
+}
