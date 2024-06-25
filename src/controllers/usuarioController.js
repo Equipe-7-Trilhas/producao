@@ -61,6 +61,20 @@ class UsuarioController {
             res.status(500).json({ message: `Falha na exclusão do usuário`, error: erro.message });
         }
     }
+
+    static loginUsuario = async (req, res) => {
+        try {
+            const { email, senha } = req.body;
+            const usuario = await Usuario.findOne({ email, senha });
+            if (usuario) {
+                res.status(200).json({ mensagem: "Login bem-sucedido", usuario });
+            } else {
+                res.status(401).json({ mensagem: "Credenciais inválidas" });
+            }
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
+    };
 }
 
 export default UsuarioController;
