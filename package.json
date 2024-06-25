@@ -1,15 +1,16 @@
 {
   "name": "trilhas-solidarias",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Plataforma que visa conectar voluntários e organizações da sociedade civil.",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["voluntariado", "organizações", "sociedade civil"],
+  "author": "Equipe 7",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1"

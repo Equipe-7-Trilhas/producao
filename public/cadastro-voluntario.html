@@ -68,6 +68,7 @@
         <div id="responseMessage"></div>
     </main>
     <script>
+        const apiBaseUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000' : '';
         document.getElementById('voluntarioForm').addEventListener('submit', async function(event) {
             event.preventDefault();
             
@@ -77,7 +78,7 @@
             data.assinaturaNewsletter = document.getElementById('assinaturaNewsletter').checked;
             
             try {
-                const response = await fetch('http://localhost:3000/usuarios', {
+                const response = await fetch(`${apiBaseUrl}/usuarios`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
